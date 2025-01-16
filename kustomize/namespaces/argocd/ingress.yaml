@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    version: 0.0.11
+spec:
+  tls:
+    - hosts:
+        - cd.apps.argoproj.io
+      secretName: argocd-secret
+  rules:
+    - host: argocd.juantobon.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-server
+                port:
+                  name: http

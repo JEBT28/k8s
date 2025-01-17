@@ -1,3 +1,4 @@
 resources:
   - ingress.yaml
   - namespace.yaml
+  - datadog.yaml

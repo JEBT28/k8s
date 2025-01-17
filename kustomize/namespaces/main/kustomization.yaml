@@ -1,0 +1,14 @@
+kind: Kustomization
+resources:
+  - ../../base
+  - nginx.yaml
+
+namespace: main
+
+namePrefix: main-
+
+commonLabels:
+  environment: main
+
+patchesStrategicMerge:
+  - ingress.yaml

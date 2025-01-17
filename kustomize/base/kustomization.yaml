@@ -1,5 +1,3 @@
 resources:
   - ingress.yaml
   - namespace.yaml
-  - nginx.yaml
-  - nginx-clusterip.yaml

@@ -5,6 +5,8 @@ metadata:
   namespace: argocd
   annotations:
     version: 0.0.11
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   tls:
     - hosts:
